@@ -39,6 +39,14 @@ After a successful installation, run the following command to inspect that the g
 dpkg -l | grep libgsl
 ```
 
+Once gsl is installed, computing the probabilities becomes very simple, for example:
+
+```C
+	double phi = gsl_ran_ugaussian_pdf( z );
+	double Phi = gsl_cdf_ugaussian_P( z );
+```
+are all the probabilities required for the question.
+
 ## Compiling the code
 
 To compile the code, you need to link with the gsl flags as well as the flag for the standard C math library ```libm```
