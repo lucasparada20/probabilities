@@ -4,7 +4,7 @@ I came across this question a while ago and thought that it was a neat example o
 
 *The probability of rain on a given calendar day in a city  is `p[i]`, where i is the day’s index. For example, `p[0]` is the probability of rain on January 1st, and `p[10]` is the probability of precipitation on January 11th. Assume the year has 365 days (i.e., `p` has 365 elements). What is the chance it rains more than `n` (e.g., 100) days? Write a function that accepts `p` (probabilities of rain on a given calendar day) and `n` as input arguments and returns the possibility of raining at least `n` days.*
 
-The questions ask for the cumulative probability of rainy days in Vancouver exceeding an integer $n$ number of days. For this, we model the event of rain on a given day $i$ as a random variable (r.v.) following the Bernoulli distribution with probability $p_i$. The cumulative sum of $n$ days raining follows a Poisson binomial (PB) distribution. Then, let $X~PB$ be an r.v. to denote the probability of a given number of rainy days. We seek: 
+The questions ask for the cumulative probability of rainy days exceeding an integer $n$ number of days. For this, we model the event of rain on a given day $i$ as a random variable (r.v.) following the Bernoulli distribution with probability $p_i$. The cumulative sum of $n$ days raining follows a Poisson binomial (PB) distribution. Then, let $X~PB$ be an r.v. to denote the cumulative probability of `n` rainy days. We seek: 
 
 ```math
 P(X > n) = 1 - P(X\leq n)
@@ -23,7 +23,7 @@ P(z \leq n) ≈ max \left(0, g(z)\right).
 ```
 Where: $g(z) = \Phi(z) + \gamma(1-z^2)\frac{\phi(z)}{6}$ and $\gamma=\frac{1}{\sigma^3}\sum_{i}p_i(1-p_i)(1-2p_i)$.
 
-Here's a helpful tip: when you're diving into exercises involving probabilities for less common distributions (like those that aren't normal or Poisson), you'll often find that there's a theoretical approach that can closely approximate your distribution with a normal distribution. So, before you jump into computing your probability directly, it's a good idea to look into the literature for a reasonable approximation. You might find it saves you some time and effort!
+Here's a helpful tip: when diving into exercises involving probabilities for less common distributions (like those that aren't normal or Poisson), you'll often find a theoretical approach that can closely approximate your distribution with a normal distribution. So, before you jump into computing your probability directly, it's a good idea to look into the literature for a reasonable approximation. You might find it saves you some time and effort!
 
 ## GNU scientific library
 
