@@ -46,6 +46,4 @@ To compile the code, you need to link with the gsl flags as well as the flag for
 ```bash
 gcc -O3 main.c -o main -lgsl -lgslcblas -lm
 ```
-### Output
-![Q1/Q1.jpg](https://github.com/lucasparada20/PicovoiceAssignment/blob/main/Q1/Q1.jpg)
 
