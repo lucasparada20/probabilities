@@ -4,7 +4,7 @@ I came across this question a while ago and thought that it was a neat example o
 
 *The probability of rain on a given calendar day in a city  is `p[i]`, where i is the day’s index. For example, `p[0]` is the probability of rain on January 1st, and `p[10]` is the probability of precipitation on January 11th. Assume the year has 365 days (i.e., `p` has 365 elements). What is the chance it rains more than `n` (e.g., 100) days? Write a function that accepts `p` (probabilities of rain on a given calendar day) and `n` as input arguments and returns the possibility of raining at least `n` days.*
 
-The questions ask for the cumulative probability of rainy days exceeding an integer $n$ number of days. For this, we model the event of rain on a given day $i$ as a random variable (r.v.) following the Bernoulli distribution with probability $p_i$. The cumulative sum of $n$ days raining follows a Poisson binomial (PB) distribution. Then, let $X~PB$ be an r.v. to denote the cumulative probability of `n` rainy days. We seek: 
+The questions ask for the cumulative probability of rainy days exceeding an integer $n$ number of days. For this, we model the event of rain on a given day $i$ as a random variable (r.v.) following the Bernoulli distribution with probability $p_i$. The cumulative sum of $n$ days raining follows a Poisson binomial (PB) distribution. Then, let $X \sim PB$ be an r.v. to denote the cumulative probability of `n` rainy days. We seek: 
 
 ```math
 P(X > n) = 1 - P(X\leq n)
