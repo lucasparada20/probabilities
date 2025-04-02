@@ -1,4 +1,4 @@
-# A fun exercise with probabilities
+# A fun exercise with probabilities in C
 
 I came across this question a while ago and thought that it was a neat example of how to showcase the GNU scientific library in C. The question was:
 
